@@ -3,13 +3,48 @@
 </div>
  
 -----------------
-
+[![](https://images.microbadger.com/badges/image/openkbs/texar-docker.svg)](https://microbadger.com/images/openkbs/pycharm-docker "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/openkbs/texar-docker.svg)](https://microbadger.com/images/openkbs/texar-docker "Get your own version badge on microbadger.com")
 
 [![pypi](https://img.shields.io/pypi/v/texar.svg)](https://pypi.python.org/pypi/texar)
 [![Build Status](https://travis-ci.org/asyml/texar.svg?branch=master)](https://travis-ci.org/asyml/texar)
 [![Documentation Status](https://readthedocs.org/projects/texar/badge/?version=latest)](https://texar.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/asyml/texar/blob/master/LICENSE)
+
  
+## (Note: this is a forked implementation from asyml/texar to provide ready-to-use [openkbs/texar-docker](https://cloud.docker.com/u/openkbs/repository/docker/openkbs/texar-docker) with this GIT repo source code (and examples) inside the container image for trying out)
+
+## Run (recommended for easy-start)
+Image is pulling from openkbs/texar-docker
+```
+./run.sh
+```
+
+## Test
+To enter the container, run the command:
+```
+./shell.sh
+```
+Once you are in the container, you can try the Texar installation with the comand:
+```bash
+python -c "import texar as tx;print(tx.data)"
+```
+And, you will see outcome as below:
+```
+<module 'texar.tf.data' from '/opt/texar/texar/tf/data/__init__.py'>
+```
+## Build
+You can build your own image locally.
+
+```
+./build.sh
+```
+
+## Credits
+* The Docker build is adopted from Tony Nong's pull request.
+* This fork is from asyml/texar.
+
+## Issues
+* Currently the docker build can't setup "tensorflow-probability-gpu" package due to errors for no matching version. See [tensorflow-probability-gpu install](https://www.tensorflow.org/probability/install).
 
 **Texar** is a toolkit aiming to support a broad set of machine learning, especially natural language processing and text generation tasks. Texar provides a library of easy-to-use ML modules and functionalities for composing whatever models and algorithms. The tool is designed for both researchers and practitioners for fast prototyping and experimentation.
 
@@ -132,3 +167,57 @@ ACL 2019
 
 ### License
 [Apache License 2.0](./LICENSE)
+
+## Packages
+```
+Package                Version   Location  
+---------------------- --------- ----------
+absl-py                0.7.1     
+asn1crypto             0.24.0    
+astor                  0.8.0     
+attrs                  19.1.0    
+certifi                2019.6.16 
+cffi                   1.12.3    
+chardet                3.0.4     
+cloudpickle            1.2.1     
+conda                  4.7.11    
+conda-package-handling 1.3.11    
+cryptography           2.7       
+decorator              4.4.0     
+funcsigs               1.0.2     
+gast                   0.2.2     
+google-pasta           0.1.7     
+grpcio                 1.22.0    
+h5py                   2.9.0     
+idna                   2.8       
+Keras-Applications     1.0.8     
+Keras-Preprocessing    1.1.0     
+libarchive-c           2.8       
+Markdown               3.1.1     
+numpy                  1.16.4    
+packaging              19.1      
+pip                    19.1.1    
+protobuf               3.9.1     
+pycosat                0.6.3     
+pycparser              2.19      
+pyOpenSSL              19.0.0    
+pyparsing              2.4.2     
+PySocks                1.7.0     
+PyYAML                 5.1.2     
+requests               2.22.0    
+ruamel-yaml            0.15.46   
+setuptools             41.0.1    
+six                    1.12.0    
+tensorboard            1.14.0    
+tensorflow             1.14.0    
+tensorflow-estimator   1.14.0    
+tensorflow-gpu         1.14.0    
+tensorflow-probability 0.7.0     
+termcolor              1.1.0     
+texar                  0.2.2     /opt/texar
+tqdm                   4.32.1    
+urllib3                1.24.2    
+Werkzeug               0.15.5    
+wheel                  0.33.4    
+wrapt                  1.11.2 
+```
