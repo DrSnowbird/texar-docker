@@ -3,7 +3,7 @@
 </div>
  
 -----------------
-[![](https://images.microbadger.com/badges/image/openkbs/texar-docker.svg)](https://microbadger.com/images/openkbs/pycharm-docker "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/openkbs/texar-docker.svg)](https://microbadger.com/images/openkbs/texar-docker "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/openkbs/texar-docker.svg)](https://microbadger.com/images/openkbs/texar-docker "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/openkbs/texar-docker.svg)](https://microbadger.com/images/openkbs/texar-docker "Get your own version badge on microbadger.com")
 
 [![pypi](https://img.shields.io/pypi/v/texar.svg)](https://pypi.python.org/pypi/texar)
 [![Build Status](https://travis-ci.org/asyml/texar.svg?branch=master)](https://travis-ci.org/asyml/texar)
