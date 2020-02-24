@@ -10,7 +10,7 @@ The image need to be built from `texar` repo directory, because docker needs to 
 
 ```bash
 cd .. 
-docker build -f docker/Dockerfile -t texar .
+docker build  -t texar .
 ```
 
 The Miniconda uses python3.6 by default, but you can pass `--build-arg PYTHON_VERSION=x.y` flag in the building cmd to specify the python version for Miniconda. E.g. under current directory, run following cmds to build image with python2.7:
